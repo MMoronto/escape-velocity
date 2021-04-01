@@ -1,0 +1,2 @@
+class Orbiter < ApplicationRecord
+end
