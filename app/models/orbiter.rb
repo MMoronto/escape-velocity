@@ -4,7 +4,7 @@ class Orbiter < ApplicationRecord
     before_create :slugify
 
     def slugify
-        self.slug = name.parametrize
+        self.slug = name.parameterize
     end
 
     def avg_score
