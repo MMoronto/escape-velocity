@@ -4,13 +4,13 @@ module Api
             def index
                 orbiters = Orbiter.all
 
-                render json: OrbiterSerializer.new(orbiters).serialized_json
+                render json: OrbiterSerializer.new(orbiters, options).serialized_json
             end
 
             def show
                 orbiter = Orbiter.find_by(slug: params[:slug])
 
-                render json: OrbiterSerializer.new(orbiter).serialized_json
+                render json: OrbiterSerializer.new(orbiter, options).serialized_json
             end
 
             def create
@@ -27,7 +27,7 @@ module Api
                 orbiter = Orbiter.find_by(slug: params[:slug])
 
                 if orbiter.update(orbiter_params)
-                    render json: OrbiterSerializer.new(orbiter).serialized_json
+                    render json: OrbiterSerializer.new(orbiter, options).serialized_json
                 else
                     render json: {error: orbiter.errors.messages}, status: 422
                 end
