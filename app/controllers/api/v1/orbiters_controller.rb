@@ -45,7 +45,7 @@ module Api
 
             private
 
-            def orbiter-params
+            def orbiter_params
                 params.require(:orbiter).permit(:name, :image_url)
             end
 
