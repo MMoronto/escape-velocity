@@ -48,6 +48,10 @@ module Api
             def orbiter-params
                 params.require(:orbiter).permit(:name, :image_url)
             end
+
+            def options
+                @options ||= { include: %i[reviews] }
+            end
         end
     end
 end
