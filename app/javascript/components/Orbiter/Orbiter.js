@@ -6,4 +6,4 @@ const Orbiter = () => {
     )
 }
 
-exportdefault Orbiter
+export default Orbiter
