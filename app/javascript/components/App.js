@@ -4,10 +4,10 @@ import Orbiters from './Orbiters/Orbiters'
 import Orbiter from './Orbiter/Orbiter'
 
 const App = () => {
-    return (
+    return(
         <Switch>
-            <Route exact path="/" component="Orbiters" />
-            <Route exact path="/orbiters/:slug" component="Orbiter" />
+            <Route exact path="/" component={Orbiters} />
+            <Route exact path="/orbiters/:slug" component={Orbiter} />
         </Switch>
     )
 }
