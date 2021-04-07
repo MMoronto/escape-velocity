@@ -5,7 +5,13 @@ const Orbiters = () => {
     const [orbiters, setOrbiters] = useState([])
 
     useEffect(() => {
-        // Our code goes here
+        axios.get('api/v1/orbiters.json')
+        .then(resp => {
+            debugger
+        })
+        .catch( data => {
+            debugger
+        })
     }, [])
 
     return(
