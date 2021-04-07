@@ -7,7 +7,7 @@ const Orbiters = () => {
     useEffect(() => {
         axios.get('api/v1/orbiters.json')
         .then(resp => {
-            debugger
+            setOrbiters(resp.data)
         })
         .catch( data => {
             debugger
