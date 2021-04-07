@@ -1,7 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 
 const Orbiters = () => {
     const [orbiters, setOrbiters] = useState([])
+
+    useEffect(() => {
+        // Our code goes here
+    }, [])
 
     return(
         <div className="home">
