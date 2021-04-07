@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import Orbiter from './Orbiter'
 
 const Orbiters = () => {
     const [orbiters, setOrbiters] = useState([])
@@ -14,6 +15,9 @@ const Orbiters = () => {
         })
     }, [])
 
+    const grid = orbiters.map((orbiter, index) => {
+        return (<li key={index}>{orbiter.data.attributes.name}</li>)
+    })
     return(
         <div className="home">
             <div className="header">
@@ -21,7 +25,9 @@ const Orbiters = () => {
                 <p className="subheader">Honest, unbiased launch vehicle reviews. Share your experience.</p>                
             </div>
             <div className="grid">
-                ORBITERS GRID GOES HERE
+                <ul>
+                    {grid}
+                </ul>
             </div>
         </div>
     )
