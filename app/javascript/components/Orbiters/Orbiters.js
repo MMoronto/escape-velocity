@@ -1,24 +1,23 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import axios from 'axios'
-import Orbiter from './Orbiter'
+// import Orbiter from './Orbiter'
 
 const Orbiters = () => {
     const [orbiters, setOrbiters] = useState([])
 
     useEffect(() => {
         axios.get('api/v1/orbiters.json')
-        .then(resp => {
-            setOrbiters(resp.data)
+        .then( resp => {
+            setOrbiters(resp.data.data)
         })
-        .catch( data => {
-            debugger
-        })
-    }, [])
+        .catch( resp => console.log(resp) )
+    }, [orbiters.length])
 
-    const grid = orbiters.map((orbiter, index) => {
-        return (<li key={index}>{orbiter.data.attributes.name}</li>)
+    const grid = orbiters.map( item => {
+        return (<li key={item.attributes.name} >{item.attributes.name}</li>)
     })
     return(
+        <Fragment>
         <div className="home">
             <div className="header">
                 <h1>EscapeVelocity</h1>
@@ -30,6 +29,7 @@ const Orbiters = () => {
                 </ul>
             </div>
         </div>
+        </Fragment>
     )
 }
 
