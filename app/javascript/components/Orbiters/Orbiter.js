@@ -1,8 +1,9 @@
 import React from 'react'
+import { BrowserRouter as Router, Link } from 'react-router-dom'
 
 const Orbiter = (props) => {
     const {name, image_url, slug} = props.attributes
-    
+
     return (
         <div className="card">
 
@@ -15,7 +16,7 @@ const Orbiter = (props) => {
             </div>
 
             <div className="link-wrapper">
-                <a href={"/" + slug}>View Orbiter</a>
+                <Link to={"/" + slug}>View Orbiter</Link>
             </div>
 
         </div>
