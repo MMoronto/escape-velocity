@@ -7,7 +7,7 @@ const Orbiter = (props) => {
     return (
         <div className="card">
 
-            <div className="orbital-logo">
+            <div className="orbiter-logo">
                 <img src={props.attributes.image_url} alt={props.attributes.name} width="50" />
             </div>
 
