@@ -1,5 +1,5 @@
 import React from 'react'
-// import { BrowserRouter as Router, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Link } from 'react-router-dom'
 
 const Orbiter = (props) => {
     // const {name, image_url, slug} = props.attributes
@@ -20,7 +20,7 @@ const Orbiter = (props) => {
             </div>
 
             <div className="orbiter-link">
-                <a href={`/orbiters/${props.attributes.slug}`}>View Orbiter</a>
+                <Link to={`/orbiters/${props.attributes.slug}`}>View Orbiter</Link>
             </div>
 
         </div>
