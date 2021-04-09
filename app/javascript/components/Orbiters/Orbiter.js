@@ -1,29 +1,63 @@
 import React from 'react'
 import { BrowserRouter as Router, Link } from 'react-router-dom'
+import styled from 'styled-components'
+
+
+const Card = styled.div`
+    border: 1px solid #efefef;
+    background: #fff;
+    text-align: center;
+`
+const OrbiterLogo = styled.div`
+    width: 50px;
+    text-align: center;
+
+    img {
+        height: 50px;
+        width: 50px;
+        border-radius: 100%;
+        border: 1px solid #efefef;
+    }
+`
+const OrbiterName = styled.div`
+    padding: 20px 0 10px 0;
+`
+const LinkWrapper = styled.div`
+    margin: 30px 0 20px 0;
+    height: 50px;
+
+    a {
+        color: #fff;
+        background: #000;
+        border-radius: 4px;
+        padding: 10px 50px;
+        border: 1px solid #000;
+        width: 100%;
+        text-decoration: none;
+    }
+`
 
 const Orbiter = (props) => {
-    // const {name, image_url, slug} = props.attributes
-
     return (
-        <div className="card">
+        <Card>
 
-            <div className="orbiter-logo">
-                <img src={props.attributes.image_url} alt={props.attributes.name} width="50" />
-            </div>
+            <OrbiterLogo>
+                <img src={props.attributes.image_url} alt={props.attributes.name}/>
+            </OrbiterLogo>
 
-            <div className="orbiter-name">
+            <OrbiterName>
                 {props.attributes.name}
-            </div>
+            </OrbiterName>
 
             <div className="orbiter-score">
                 {props.attributes.avg_score}
             </div>
 
-            <div className="orbiter-link">
+            <LinkWrapper>
                 <Link to={`/orbiters/${props.attributes.slug}`}>View Orbiter</Link>
-            </div>
+            </LinkWrapper>
 
-        </div>
+        </Card>
     )
 }
 
