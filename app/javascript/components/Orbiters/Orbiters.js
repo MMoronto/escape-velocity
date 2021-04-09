@@ -33,22 +33,15 @@ const Orbiters = () => {
 
     useEffect( () => {
         axios.get('api/v1/orbiters.json')
-        .then( resp => {
-            setOrbiters(resp.data.data) 
-        })
+        .then( resp => setOrbiters(resp.data.data))
         .catch( resp => console.log(resp) )
     }, [orbiters.length])
 
     const grid = orbiters.map( item => {
-        // const { name, image_url, slug, average_score } = orbiter.attributes
-
         return (
             <Orbiter 
                 key={item.attributes.name}
                 attributes={item.attributes}
-                // image_url={image_url}
-                // slug={slug}
-                // average_score={average_score}
             />
         )
     })

@@ -9,13 +9,16 @@ const Card = styled.div`
     text-align: center;
 `
 const OrbiterLogo = styled.div`
-    width: 50px;
+    width: 100px;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
 
     img {
         height: 50px;
-        width: 50px;
-        border-radius: 100%;
+        width: 100px;
+        border-radius: 20%;
         border: 1px solid #efefef;
     }
 `
