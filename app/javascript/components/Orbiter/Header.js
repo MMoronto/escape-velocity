@@ -6,7 +6,7 @@ const Header = (props) => {
 
     return (
         <div className="Wrapper">
-            <h1> <img src={img_url} alt={name} /> {name}</h1>
+            <h1> <img src={image_url} alt={name} /> {name}</h1>
             <div>
                 <div className="totalReviews">{total} User Reviews</div>
                 <div className="starRating"></div>
