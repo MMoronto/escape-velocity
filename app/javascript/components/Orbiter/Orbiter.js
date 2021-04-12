@@ -1,6 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Header from './Header'
+import styled from 'styled-components'
+
+const Wrapper = styled.div`
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+`
+const Column = styled.div``
+const Main = styled.div``
 
 const Orbiter = (props) => {
     const [orbiter, setOrbiter] = useState({})
@@ -22,14 +32,16 @@ const Orbiter = (props) => {
     return (
         <div className="wrapper">
             <div className="column">
-                { 
-                    loaded &&
-                <Header 
-                    attributes={orbiter.data.attributes}
-                    reviews={orbiter.included}
-                />
-                }
-                <div className="reviews"></div>
+                <div className="main">
+                    { 
+                        loaded &&
+                    <Header 
+                        attributes={orbiter.data.attributes}
+                        reviews={orbiter.included}
+                    />
+                    }
+                    <div className="reviews"></div>
+                </div>
             </div>
             <div className="column">
                 <div className="review-form">[Review Form Goes Here.]</div>
