@@ -1,5 +1,5 @@
-import axios from 'axios'
 import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 import Header from './Header'
 
 const Orbiter = (props) => {
@@ -26,6 +26,7 @@ const Orbiter = (props) => {
                     loaded &&
                 <Header 
                     attributes={orbiter.data.attributes}
+                    reviews={orbiter.included}
                 />
                 }
                 <div className="reviews"></div>
