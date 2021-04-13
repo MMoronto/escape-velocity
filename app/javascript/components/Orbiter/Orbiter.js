@@ -53,7 +53,6 @@ const Orbiter = (props) => {
                                 attributes={orbiter.data.attributes}
                                 reviews={orbiter.included}
                             />
-                            }
                             <div className="reviews"></div>
                         </Main>
                     </Column>
@@ -61,8 +60,9 @@ const Orbiter = (props) => {
                         <ReviewForm/>
                     </Column>
                 </Fragment>
-            )
+             }
         </Wrapper>
+        )
     
 }
 

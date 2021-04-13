@@ -5,7 +5,7 @@ const ReviewForm = (props) => {
         <div className="wrapper">
             <form>
                 <div>Have an experience with [Orbiter Name]? Share your review!</div>
-                <div>
+                <div className="field">
                     <input type="text" name="title" placeholder="Review Title"/>
                 </div>
                 <div className="field">
@@ -22,3 +22,5 @@ const ReviewForm = (props) => {
         </div>
     )
 }
+
+export default ReviewForm
