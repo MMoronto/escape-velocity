@@ -17,6 +17,7 @@ const ReviewForm = (props) => {
                         [Star Rating Goes Here]
                     </div>
                 </div>
+                <button type="submit">Submit Your Review</button>
             </form>
         </div>
     )
