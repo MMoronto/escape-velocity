@@ -42,6 +42,14 @@ const Orbiter = (props) => {
         .catch( resp => console.log(resp) )
     }, [])
 
+    const handleChange = (e) => {
+        e.preventDefault()
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+    }
+
     return (
         <Wrapper>
             { 
@@ -57,7 +65,12 @@ const Orbiter = (props) => {
                         </Main>
                     </Column>
                     <Column>
-                        <ReviewForm/>
+                        <ReviewForm
+                            handleChange={handleChange}
+                            handleSubmit={handleChange}
+                            attributes={orbiter.data.attributes}
+                            review={review}
+                        />
                     </Column>
                 </Fragment>
              }
