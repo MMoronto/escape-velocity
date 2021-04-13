@@ -44,6 +44,8 @@ const Orbiter = (props) => {
 
     const handleChange = (e) => {
         e.preventDefault()
+
+        console.log('name:', e.target.name, 'value:', e.target.value)
     }
 
     const handleSubmit = (e) => {
