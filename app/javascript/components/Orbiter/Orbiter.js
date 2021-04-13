@@ -9,8 +9,20 @@ const Wrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 `
-const Column = styled.div``
-const Main = styled.div``
+
+const Column = styled.div`
+    background: #fff;
+    height: 100vh;
+    overflow: scroll;
+
+    &:last-child {
+      background: #000;  
+    }
+`
+
+const Main = styled.div`
+    padding-left: 50px;
+`
 
 const Orbiter = (props) => {
     const [orbiter, setOrbiter] = useState({})
@@ -30,9 +42,9 @@ const Orbiter = (props) => {
     }, [])
 
     return (
-        <div className="wrapper">
-            <div className="column">
-                <div className="main">
+        <Wrapper>
+            <Column>
+                <Main>
                     { 
                         loaded &&
                     <Header 
@@ -41,12 +53,12 @@ const Orbiter = (props) => {
                     />
                     }
                     <div className="reviews"></div>
-                </div>
-            </div>
-            <div className="column">
+                </Main>
+            </Column>
+            <Column>
                 <div className="review-form">[Review Form Goes Here.]</div>
-            </div>
-        </div>
+            </Column>
+        </Wrapper>
     )
     
 }
