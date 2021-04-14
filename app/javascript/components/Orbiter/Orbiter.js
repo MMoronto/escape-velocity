@@ -59,7 +59,9 @@ const Orbiter = (props) => {
         const orbiter_id = orbiter.data.id
         axios.post('/api/v1/reviews', {review, orbiter_id})
         .then(resp => {
-            debugger
+            const included = [...orbiter.included, resp.data]
+            setOrbiter({...orbiter, included})
+            setReview({title: '', description: '', score: 0})
         })
         .catch(resp => {})
     }
