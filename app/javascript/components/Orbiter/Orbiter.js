@@ -81,7 +81,7 @@ const Orbiter = (props) => {
                     <Column>
                         <ReviewForm
                             handleChange={handleChange}
-                            handleSubmit={handleChange}
+                            handleSubmit={handleSubmit}
                             attributes={orbiter.data.attributes}
                             review={review}
                         />
