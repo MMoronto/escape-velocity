@@ -67,7 +67,7 @@ const ReviewForm = (props) => {
                 </div>
                 <div className="field">
                     <RatingContainer>
-                        <div className="rating-title-text">Rate this Orbiter</div>
+                        <div className="rating-title-text">Rate This Orbiter</div>
                         <RatingBox>
                             {ratingOptions}
                         </RatingBox>
