@@ -77,13 +77,13 @@ const Wrapper = styled.div`
 `
 const SubmitBtn = styled.button`
     color: #fff;
-    background: #333;
+    background: #20B2AA;
     border-radius: 4px;
     padding: 12px;
     font-size: 18px;
     cursor: pointer;
     transition: ease-in-out 0.1s;
-    border: 1px solid #fff;
+    border: 1px solid #20B2AA;
     width: 100%;
     margin-top: 20px;
     &:hover {
