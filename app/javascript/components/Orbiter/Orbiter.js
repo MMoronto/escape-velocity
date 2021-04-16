@@ -66,6 +66,10 @@ const Orbiter = (props) => {
         .catch(resp => {})
     }
 
+    const setRating = (score, e) => {
+        e.preventDefault()
+    }
+
     return (
         <Wrapper>
             { 
@@ -84,6 +88,7 @@ const Orbiter = (props) => {
                         <ReviewForm
                             handleChange={handleChange}
                             handleSubmit={handleSubmit}
+                            setRating={setRating}
                             attributes={orbiter.data.attributes}
                             review={review}
                         />
