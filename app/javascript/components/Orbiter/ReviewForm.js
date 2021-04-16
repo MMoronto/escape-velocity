@@ -44,6 +44,31 @@ const RatingBox = styled.div`
         background-image: url("data:image/svg+xml;charset=UTF-8,${Hover}");
     }    
 `
+
+const Field = styled.div`
+    border-radius: 4px;
+
+    input {
+        min-height: 50px;
+        border-radius: 4px;
+        border: 1px solid #e6e6e6;
+        margin: 12px 0;
+        padding: 12px;
+    }
+
+    textarea {
+        width: 100%;
+        min-height: 80px;
+        border-radius: 4px;
+        border: 1px solid #e6e6e6;
+        margin: 12px 0;
+        padding: 12px;
+    }
+`
+
+const Wrapper = styled.div``
+const SubmitBtn = styled.button``
+const Headline = styled.div``
 const RatingTitle = styled.div``
 
 const ReviewForm = (props) => {
@@ -59,20 +84,20 @@ const ReviewForm = (props) => {
         <div className="wrapper">
             <form onSubmit={props.handleSubmit}>
                 <div>Have an experience with {props.attributes.name}? Share your review!</div>
-                <div className="field">
+                <Field>
                     <input onChange={props.handleChange} value={props.review.title} type="text" name="title" placeholder="Review Title"/>
-                </div>
-                <div className="field">
+                </Field>
+                <Field>
                     <input onChange={props.handleChange} value={props.review.description} type="text" name="description" placeholder="Review Description"/>
-                </div>
-                <div className="field">
+                </Field>
+                <Field>
                     <RatingContainer>
                         <div className="rating-title-text">Rate This Orbiter</div>
                         <RatingBox>
                             {ratingOptions}
                         </RatingBox>
                     </RatingContainer>
-                </div>
+                </Field>
                 <button type="submit">Submit Your Review</button>
             </form>
         </div>
