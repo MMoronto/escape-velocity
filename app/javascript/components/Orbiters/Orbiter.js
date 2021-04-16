@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Link } from 'react-router-dom'
 import styled from 'styled-components'
-
+import Rating from '../Rating/Rating'
 
 const Card = styled.div`
     border: 1px solid #efefef;
@@ -43,19 +43,12 @@ const LinkWrapper = styled.div`
 const Orbiter = (props) => {
     return (
         <Card>
-
             <OrbiterLogo>
                 <img src={props.attributes.image_url} alt={props.attributes.name}/>
             </OrbiterLogo>
 
-            <OrbiterName>
-                {props.attributes.name}
-            </OrbiterName>
-
-            <div className="orbiter-score">
-                {props.attributes.avg_score}
-            </div>
-
+            <OrbiterName>{props.attributes.name}</OrbiterName>
+            <Rating score={props.attributes.avg_score}/>
             <LinkWrapper>
                 <Link to={`/orbiters/${props.attributes.slug}`}>View Orbiter</Link>
             </LinkWrapper>
