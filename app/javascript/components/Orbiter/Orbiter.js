@@ -60,7 +60,7 @@ const Orbiter = (props) => {
         const orbiter_id = orbiter.data.id
         axios.post('/api/v1/reviews', {review, orbiter_id})
         .then(resp => {
-            const included = [...orbiter.included, resp.data]
+            const included = [...orbiter.included, resp.data.data]           
             setOrbiter({...orbiter, included})
             setReview({title: '', description: '', score: 0})
         })
