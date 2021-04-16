@@ -73,6 +73,18 @@ const Orbiter = (props) => {
         setReview({...review, score})
     }
 
+    let reviews
+    if ( loaded && orbiter.included ) {
+        reviews = orbiter.included.map( (item, index) => {
+            return (
+                <Review
+                key={index}
+                attributes={itemm.attributes}  
+                />
+            )
+        })
+    }
+
     return (
         <Wrapper>
             { 
@@ -84,7 +96,7 @@ const Orbiter = (props) => {
                                 attributes={orbiter.data.attributes}
                                 reviews={orbiter.included}
                             />
-                            <div className="reviews"></div>
+                            {reviews}
                         </Main>
                     </Column>
                     <Column>
