@@ -68,6 +68,8 @@ const Orbiter = (props) => {
 
     const setRating = (score, e) => {
         e.preventDefault()
+
+        setReview({...review, score})
     }
 
     return (
