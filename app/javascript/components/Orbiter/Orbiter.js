@@ -74,12 +74,12 @@ const Orbiter = (props) => {
     }
 
     let reviews
-    if ( loaded && orbiter.included ) {
+    if (loaded && orbiter.included) {
         reviews = orbiter.included.map( (item, index) => {
             return (
                 <Review
                 key={index}
-                attributes={itemm.attributes}  
+                attributes={item.attributes}  
                 />
             )
         })
