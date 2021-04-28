@@ -1,4 +1,4 @@
 # README
 
 # escape-velocity
-A sub-orbital space flight reviews Ruby on Rails and React.js application
+A sub-orbital space tourism reviews application built with Ruby on Rails and React.js 
