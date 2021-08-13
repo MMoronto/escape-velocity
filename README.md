@@ -1,7 +1,7 @@
 # README
 
 # escape-velocity
-Commercial Space carrier (capsule/launch vehicles) review application. Ruby on Rails and React.js 
+A ratings application for reviewing Commercial Space capsules & launch vehicles. Built with Ruby on Rails and React.js 
 
 ![escapeVelocity3](https://user-images.githubusercontent.com/13769211/117817998-28f42880-b236-11eb-830d-3c4abbe0d690.gif)
 
